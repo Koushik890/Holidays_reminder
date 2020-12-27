@@ -1,4 +1,4 @@
-def email_script(receiver_email,msg):
+def email_script(receiver_email, message ):
     import os
     import smtplib
     import imghdr
@@ -9,11 +9,12 @@ def email_script(receiver_email,msg):
     sender_email = os.environ.get("Email_User")
     sender_password = os.environ.get("Email_Pass")
 
+
     msg = EmailMessage()
     msg['Subject'] = 'Holiday Reminder'
     msg['From'] = sender_email
     msg['To'] = receiver_email
-    msg.set_content(msg)
+    msg.set_content(message)
 
     with smtplib.SMTP_SSL(smtp_server, port) as smtp:   
 
