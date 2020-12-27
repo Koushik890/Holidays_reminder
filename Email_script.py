@@ -1,4 +1,4 @@
-def email_script():
+def email_script(receiver_email):
     import os
     import smtplib
     import imghdr
@@ -8,7 +8,7 @@ def email_script():
     port = 465 
     sender_email = os.environ.get("Email_User")
     sender_password = os.environ.get("Email_Pass")
-    receiver_email = 'koushik.dey8790@gmail.com'
+    # receiver_email = 'koushik.dey8790@gmail.com'
 
     msg = EmailMessage()
     msg['Subject'] = 'Holiday Reminder'
@@ -31,7 +31,7 @@ def email_script():
         smtp.login(sender_email, sender_password)
         smtp.send_message(msg)   #sending Email
 
-email_script()    
+# email_script()    
 
 
 
