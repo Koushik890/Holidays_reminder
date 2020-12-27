@@ -11,7 +11,7 @@ uk_holidays = holidays.UnitedKingdom() #this code snippet is from geeksforgeeks
 for ptr in holidays.UnitedKingdom(years = 2021).items():  
     print(ptr) 
 
-print("\nFor which event you want reminder? Please enter the date from following list with DD-MM-YYYY format.")
+print("\nFor which event you would like to get reminder? Please enter the date from following list with DD-MM-YYYY format.")
 while(1):
     
     remind_date = parser.parse(input("Enter date: "))
