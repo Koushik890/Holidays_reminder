@@ -1,4 +1,4 @@
-def email_script(receiver_email):
+def email_script(receiver_email,msg):
     import os
     import smtplib
     import imghdr
@@ -14,7 +14,7 @@ def email_script(receiver_email):
     msg['Subject'] = 'Holiday Reminder'
     msg['From'] = sender_email
     msg['To'] = receiver_email
-    msg.set_content("For which event you want to get a reminder?")
+    msg.set_content(msg)
 
     #with open("Screenshot 2020-12-26 200042.png", "rb") as f:
     #file_data = f.read()
