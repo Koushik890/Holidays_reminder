@@ -19,7 +19,7 @@ def email_script(receiver_email, message ):
     with smtplib.SMTP_SSL(smtp_server, port) as smtp:   
 
         smtp.login(sender_email, sender_password)
-        smtp.send_message(msg)   #sending Email
+        smtp.send_message(msg)   #sending the email
     
 
 
